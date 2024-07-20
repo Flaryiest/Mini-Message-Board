@@ -29,7 +29,6 @@ app.get('/new', (req, res, next) => {
 })
 
 app.post('/new', (req, res) => {
-    console.log(req.body)
     messages.push({text: req.body.text, user: req.body.user, added: new Date() })
     res.redirect("/")
 })
